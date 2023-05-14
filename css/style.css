@@ -266,3 +266,44 @@ footer {
   visibility: hidden;
   opacity: 0;
 }
+
+@media (max-width: 768px) {
+  h2 {
+    font-size: 2rem;
+  }
+  .header-container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px;
+  }
+
+  .main-container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px;
+  }
+
+  .main-contenido {
+    font-size: 2rem;
+  }
+
+  .main-contenido h1 {
+    font-size: 3rem;
+  }
+
+  .main-img {
+    width: 200px;
+    height: auto;
+  }
+
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px;
+  }
+
+  .cards-proyectos {
+    width: 40%;
+    height: 60vh;
+  }
+}
