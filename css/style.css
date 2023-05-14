@@ -163,55 +163,80 @@ footer {
 
 /* **************************************** FORMULARIO **************************************** */
 
-form {
-  width: 60%;
-  display: flex;
-  flex-direction: column;
+.contact-form {
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
 }
 
-form * {
-  margin-bottom: 1rem;
+.contact-form > * {
+  padding: 0.5rem;
+  margin: 1rem auto;
+  display: block;
+  width: 100%;
 }
 
-form > input {
-  height: 2.5rem;
-  margin: 1rem;
-  font-size: 1.25rem;
-  color: var(--color-tittle);
-  text-decoration: none;
-  background-color: white;
-  border-style: none;
-}
-form > label {
-  margin-bottom: 0;
+.contact-form textarea {
+  resize: none;
 }
 
-form > textarea {
-  margin-top: 1rem;
-  border-style: none;
-}
-
-form > button {
+.contact-form legend,
+.contact-form-response {
   font-size: 1.5rem;
   font-weight: bold;
-  color: white;
+  text-align: center;
+}
 
-  width: 15rem;
-  height: 2.5rem;
+.contact-form input,
+.contact-form textarea {
+  font-size: 1rem;
+  font-family: sans-serif;
+}
 
-  background-color: lightblue;
-  border-style: none;
-
+.contact-form input[type='submit'] {
+  width: 50%;
+  font-weight: bold;
   cursor: pointer;
 }
 
-input:focus {
-  outline: none;
-  border-bottom: 2px solid var(--color-tittle);
+.contact-form *::placeholder {
+  color: var(--color-font);
 }
-textarea:focus {
-  outline: none;
-  border-bottom: 2px solid var(--color-tittle);
+
+.contact-form [required]:valid {
+  border: thin solid var(--color-tittle);
+}
+
+.contact-form [required]:invalid {
+  border: thin solid lightcoral;
+}
+
+.contact-form-error {
+  margin-top: -1rem;
+  font-size: 80%;
+  background-color: black;
+  color: lightblue;
+  transition: all 800ms ease;
+}
+
+.contact-form-error.is-active {
+  display: block;
+  animation: show-message 1s 1 normal 0s ease-out both;
+}
+
+.none {
+  display: none;
+}
+
+@keyframes show-message {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
 }
 /* **************************************** DOM **************************************** */
 
