@@ -12,6 +12,10 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.2.1/hamburgers.min.css"
+    />
     <link rel="stylesheet" href="css/style.css" />
     <title>Paul</title>
   </head>
@@ -19,13 +23,15 @@
     <header class="header">
       <div class="header-container">
         <a href="#">Paul_Dlc</a>
-        <nav>
-          <a href="#sobre-mi">Sobre mi</a>
-          <a href="#tecnologias">Tecnologías</a>
-          <a href="#formacion">Formación</a>
-          <a href="#proyectos">Proyectos</a>
-          <a href="#contacto">Contacto</a>
-        </nav>
+        <div class="panel">
+          <nav class="menu">
+            <a href="#sobre-mi">Sobre mi</a>
+            <a href="#tecnologias">Tecnologías</a>
+            <a href="#formacion">Formación</a>
+            <a href="#proyectos">Proyectos</a>
+            <a href="#contacto">Contacto</a>
+          </nav>
+        </div>
       </div>
     </header>
 
@@ -202,6 +208,11 @@
     <footer>
       <small>Desarrollado por Paul De La Cruz C.</small>
     </footer>
+    <button class="panel-btn hamburger hamburger--boring" type="button">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
     <button class="scroll-top-btn hidden">&#11014;</button>
     <script src="js/index.js" type="module"></script>
   </body>
