@@ -7,5 +7,5 @@ const d = document;
 d.addEventListener('DOMContentLoaded', (e) => {
   scrollTopButton('.scroll-top-btn');
   contactFormValidations();
-  hamburgerMenu('.panel-btn', '.panel', '.menu');
+  hamburgerMenu('.panel-btn', '.panel', '.menu', '.menu a');
 });

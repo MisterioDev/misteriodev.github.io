@@ -1,20 +1,22 @@
-export default function hamburgerMenu(panelBtn, panel, menu) {
+export default function hamburgerMenu(panelBtn, panel, menu, menuLink) {
   const d = document,
-    w = window,
-    $panelBtn = d.querySelector(panelBtn);
+    w = window;
 
-  $panelBtn.addEventListener('click', (e) => {
-    if (w.innerWidth < 700) {
+  d.addEventListener('click', (e) => {
+    if (e.target.matches(panelBtn) || e.target.matches(`${panelBtn} *`)) {
       d.querySelector(panel).classList.toggle('panel-phone');
+      d.querySelector(panel).classList.remove('panel-none');
       d.querySelector(menu).classList.toggle('menu-phone');
       d.querySelector(panel).classList.toggle('is-active');
+      d.querySelector(panelBtn).classList.toggle('is-active');
     }
-  });
-  w.addEventListener('resize', (e) => {
-    if (w.innerWidth > 700) {
+
+    if (e.target.matches(menuLink)) {
       d.querySelector(panel).classList.remove('panel-phone');
+      d.querySelector(panel).classList.toggle('panel-none');
       d.querySelector(menu).classList.remove('menu-phone');
       d.querySelector(panel).classList.remove('is-active');
+      d.querySelector(panelBtn).classList.remove('is-active');
     }
   });
 }
