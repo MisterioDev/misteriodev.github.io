@@ -1,6 +1,5 @@
 export default function hamburgerMenu(panelBtn, panel, menu, menuLink) {
-  const d = document,
-    w = window;
+  const d = document;
 
   d.addEventListener('click', (e) => {
     if (e.target.matches(panelBtn) || e.target.matches(`${panelBtn} *`)) {

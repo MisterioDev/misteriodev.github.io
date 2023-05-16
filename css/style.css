@@ -323,9 +323,57 @@ footer {
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 360px) {
   .panel-none {
     display: none;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  .header-container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+  }
+
+  .main-container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .main-contenido {
+    width: 300px;
+
+    margin-left: 2rem;
+    margin-right: auto;
+
+    font-size: 1.5rem;
+  }
+
+  .main-contenido h1 {
+    font-size: 3rem;
+  }
+
+  .main-img {
+    width: 200px;
+    height: auto;
+  }
+
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+  }
+
+  .cards-proyectos {
+    width: 95%;
+    height: 60vh;
   }
 }
 
